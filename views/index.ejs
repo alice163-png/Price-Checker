@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Checker</title>
+</head>
+
+<body>
+    <h1>Choose a Cryptocurrency</h1>
+    <form action="/submit" method="POST">
+      <label for="crypto-select">Select a cryptocurrency:</label>
+      <select id="crypto-select" name="cryptocurrency">
+        <% cryptocurrencies.forEach(crypto => { %>
+          <option value="<%= crypto.name %>"><%= crypto.name %></option>
+        <% }); %>
+      </select>
+      <br><br>
+      <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
